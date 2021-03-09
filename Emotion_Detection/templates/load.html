@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Emotion Predictor</title>
+</head>
+
+<body>
+
+
+    <div align="center">
+        <img src="{{url_for('static', filename='bg.jpg')}}"  alt="My image"/>
+    </div>
+<br><br>
+
+   <h1 align="center" >Social Emotion Predictor</h1>
+   <br><br><br>
+
+    <form method="get">
+  <div class="form-group"  align="center">
+
+    <textarea rows="5" cols="50" name="text" placeholder="Enter your text">{{text}}</textarea>
+  </div>
+        <div align="center">
+<button type="submit" class="btn btn-success">Predict</button> <br><br>
+        </div>
+  <div class="form-group"  align="center">
+
+    <label class="label">Predicted Emotion: </label> <br>
+      <img src="{{url_for('static', filename=prediction+'.png')}}" name="emoji_predicted" align="middle" style="width:150px ; height:150px" />
+  </div>
+
+</form>
+
+</body>
+</html>
